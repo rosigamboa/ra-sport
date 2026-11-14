@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="R&A SPORT — indumentaria, botines y accesorios deportivos.">
+  <title>R&A SPORT | Tienda deportiva</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">⚡ EQUIPATE PARA GANAR · NUEVOS INGRESOS</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="R&A SPORT inicio"><span class="brand-mark">R<span>&</span>A</span><span class="brand-name">SPORT<small>STORE</small></span></a>
+    <nav class="desktop-nav"><a href="#catalogo">Catálogo</a><a href="#beneficios">Beneficios</a><a href="#nosotros">Nosotros</a></nav>
+    <button class="cart-button" id="openCart" aria-label="Abrir carrito">🛒 <span>Mi carrito</span><b id="cartCount">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">R&A SPORT · TEMPORADA 2026</p>
+        <h1>JUGÁ CON<br><em>ACTITUD.</em></h1>
+        <p class="hero-text">Tu próximo partido empieza con el equipo correcto. Encontrá botines, camisetas y zapatillas para darlo todo.</p>
+        <a class="primary-btn" href="#catalogo">EXPLORAR PRODUCTOS <span>↘</span></a>
+        <div class="hero-stats"><div><strong>100%</strong><small>PASIÓN DEPORTIVA</small></div><div><strong>24/7</strong><small>TIENDA ONLINE</small></div></div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Diseño deportivo con pelota de fútbol">
+        <div class="hero-circle"></div><div class="hero-tag">PLAY<br><b>HARD.</b></div>
+        <div class="ball">⚽</div><div class="hero-stripe"></div>
+        <div class="hero-caption">NO ES SOLO UN JUEGO.</div>
+      </div>
+    </section>
+
+    <section class="benefit-strip" id="beneficios">
+      <div><span>🚚</span><p><b>Envíos coordinados</b><small>A todo el país</small></p></div>
+      <div><span>💬</span><p><b>Atención directa</b><small>Consultanos por WhatsApp</small></p></div>
+      <div><span>🏆</span><p><b>Estilo deportivo</b><small>Para cada desafío</small></p></div>
+    </section>
+
+    <section class="catalog section-wrap" id="catalogo">
+      <div class="section-heading"><div><p class="eyebrow">ELEGÍ TU EQUIPO</p><h2>PRODUCTOS <em>DESTACADOS</em></h2></div><span class="catalog-count" id="resultCount">6 productos</span></div>
+      <div class="toolbar">
+        <label class="search-box">⌕ <input id="searchInput" type="search" placeholder="Buscar productos..." aria-label="Buscar productos"></label>
+        <div class="filters" role="group" aria-label="Filtrar por categoría">
+          <button class="filter active" data-category="Todos">Todos</button><button class="filter" data-category="Botines">Botines</button><button class="filter" data-category="Camisetas">Camisetas</button><button class="filter" data-category="Zapatillas">Zapatillas</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="promo section-wrap" id="nosotros">
+      <div><p class="eyebrow">MÁS QUE INDUMENTARIA</p><h2>VIVÍ EL DEPORTE.<br><em>VESTÍ TU PASIÓN.</em></h2><p>En R&A SPORT compartimos tu pasión por el fútbol y el deporte. Elegí tu próximo producto y consultanos por disponibilidad de talles.</p><a class="outline-btn" href="#catalogo">VER CATÁLOGO</a></div>
+      <div class="promo-number">R&A<span>®</span><small>SPORT STORE</small></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">R<span>&</span>A</span><span class="brand-name">SPORT<small>STORE</small></span></a><p>© 2026 R&A SPORT. Proyecto académico de tienda web.</p><a href="#catalogo">Volver arriba ↑</a></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow">TU SELECCIÓN</p><h2>MI CARRITO</h2></div><button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">✕</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-bottom"><div class="total-line"><span>Total estimado</span><strong id="cartTotal">$0</strong></div><button class="primary-btn checkout-btn" id="checkoutBtn">PREPARAR PEDIDO ↗</button><p class="tiny-note">El pedido se coordina directamente con R&A SPORT. Los precios y el stock pueden confirmarse al consultar.</p></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
